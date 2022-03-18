@@ -1,0 +1,733 @@
+@import url("https://fonts.googleapis.com/css?family=DM Sans");
+
+$white: #fff;
+$silver: #cfcfcf;
+$blue: #35d3ff;
+$lightBlue: #57b3fe;
+$lighterBlue: #d7f2ff;
+$lightViolet: #a963fb;
+$violet: #503e9c;
+$darkViolet: #75578e;
+$black: #000;
+$dark: #3b3e43;
+$blueDark: #595e64;
+$green: #00cc00;
+$darkGreen: #51a690;
+$emerald: #00a198;
+$blueGreen: #0985b9;
+$orange: #fead86;
+$orangeYellow: #ffe15f;
+$facebook: #3b5998;
+$instagram: #bc2a8d;
+$twitter: #00aced;
+$semiBoldFontWeight: 600;
+$cursor: pointer;
+$flex: flex;
+$flexWrap: wrap;
+$noneTextDecoration: none;
+$upperTextTransform: uppercase;
+$centerText: center;
+$leftText: left;
+$noneBorder: none;
+$noneDisplay: none;
+$containBgSize: contain;
+$absBgSize: 100% 100%;
+$centerBgPosition: center;
+$absVh: 100vh;
+$absPosition: absolute;
+$headBg: url("../images/head_bg.png");
+$dashboardImg: url("../images/dashboard.png");
+$detailBg: url("../images/detail_bg.png");
+$processBg: url("../images/process_bg.png");
+$startBg: url("../images/start_bg.png");
+
+//mixin
+@mixin caption {
+  @content;
+}
+
+@mixin description($fontSize) {
+  font-size: $fontSize;
+}
+
+@mixin button-desktop() {
+  width: 174px;
+  height: 41px;
+  margin-left: 5px;
+  margin-top: 10px;
+  background-color: $white;
+}
+
+// for extend
+.title {
+  margin: 14px auto 24px;
+  justify-content: $centerText;
+}
+
+.button {
+  border: $noneBorder;
+  width: 194px;
+  height: 61px;
+  border-radius: 30px;
+  cursor: $cursor;
+  color: $lightBlue;
+  text-transform: $upperTextTransform;
+  background-color: $white;
+  font-weight: $semiBoldFontWeight;
+}
+
+//responsiveness
+// $tabletSizes: "mobile", "desktop", "large";
+// $minTablets: "320px", "920px", "1261px";
+// $maxTablets: "919.9px", "1260px", "1485.6px";
+
+// @for $i from 1 through length($tabletSizes) {
+//   $tabletSize: nth($tabletSizes, $i);
+//   $minTablet: nth($minTablets, $i);
+//   $maxTablet: nth($maxTablets, $i);
+
+//   @mixin #{$tabletSize} {
+//     @media (min-width: $minTablet) and (max-width: $maxTablet) {
+//       @content;
+//     }
+//   }
+// }
+
+//
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "DM Sans";
+  .page {
+    height: $absVh;
+    color: $white;
+    background-image: $headBg;
+    background-size: $absBgSize;
+
+    .navbar {
+      display: $flex;
+      .navbar__brand {
+        display: $flex;
+        color: $white;
+        text-decoration: $noneTextDecoration;
+        padding-top: 60px;
+        padding-left: 60px;
+      }
+      .navbar__logo {
+        height: 66.49px;
+        margin-right: 4.12px;
+      }
+      .navbar__name {
+        width: 140.89px;
+        height: 19px;
+        font-size: 23px; /*18-29px*/
+        line-height: 58px;
+        padding-bottom: 23px;
+        padding-right: 9.11px;
+        font-weight: $semiBoldFontWeight;
+      }
+      .navbar__icon {
+        cursor: $cursor;
+        height: 28px;
+        color: $white;
+        &:hover {
+          color: $violet;
+        }
+      }
+      #checkbox,
+      .navbar__icon {
+        display: $noneDisplay;
+      }
+    }
+
+    .menu {
+      display: $flex;
+      flex-wrap: $flexWrap;
+      padding-top: 60px;
+      margin: 0px 0px 0px 200px;
+      .menu__item {
+        font-size: 18px;
+        text-decoration: $noneTextDecoration;
+        margin-right: 32px;
+        padding-top: 18px;
+        &:visited {
+          color: $white;
+        }
+      }
+
+      .menu__button {
+        margin-left: 30px;
+      }
+    }
+
+    .button {
+      @extend .button;
+    }
+
+    .company {
+      width: 63%;
+      margin: 50px auto;
+      text-align: $centerText;
+      .company__description {
+        line-height: 38px;
+        text-transform: capitalize;
+      }
+      .company__button {
+        margin: 20px auto;
+      }
+    }
+
+    .dashboard {
+      height: $absVh;
+      margin: 80px 0px 170px 250px;
+      background-size: $containBgSize;
+      background-repeat: no-repeat;
+      background-image: $dashboardImg;
+    }
+
+    .assistance {
+      height: $absVh;
+      background-size: $absBgSize;
+      background-image: $detailBg;
+      .assistance__title {
+        margin-left: 100px;
+        margin-bottom: 0px;
+        color: $dark;
+      }
+      .data {
+        display: $flex;
+        overflow: auto;
+        flex-wrap: $flexWrap;
+        margin: 29px 100px 0px 100px;
+        .data__item {
+          flex-grow: 1;
+          width: 25%;
+          margin-right: 30px;
+          margin-bottom: 25px;
+          padding: 32px;
+          border-radius: 7px;
+          border: 1px solid $lightViolet;
+          background-color: $white;
+          .data__img {
+            margin-top: 18px;
+            margin-left: 9px;
+            border-radius: 7px;
+          }
+          .data__img--chart {
+            box-shadow: 0 0 15px 5px $orange;
+          }
+          .data__img--discount {
+            box-shadow: 0 0 15px 5px $darkGreen;
+          }
+          .data__img--user {
+            box-shadow: 0 0 15px 5px $orangeYellow;
+          }
+          .data__img--search {
+            box-shadow: 0 0 15px 5px $emerald;
+          }
+
+          .data__img--graph {
+            box-shadow: 0 0 15px 5px $darkViolet;
+          }
+
+          .data__img--bag {
+            box-shadow: 0 0 15px 5px $blueGreen;
+          }
+          .data__title {
+            color: $dark;
+            padding-top: 20px;
+            padding-bottom: 15px;
+            margin: 0;
+          }
+          .data__text {
+            color: $blueDark;
+          }
+        }
+      }
+
+      .process {
+        width: 100%;
+        margin-top: 184px;
+        padding-bottom: 194px;
+        text-align: $centerText;
+        background-size: $absBgSize;
+        background-image: $processBg;
+        .heading {
+          padding: 194px 300px 0px;
+          @include caption {
+            .caption {
+              text-transform: $upperTextTransform;
+            }
+          }
+          .title {
+            @extend .title;
+          }
+          .description {
+            @include description(20px);
+          }
+        }
+        .process__details {
+          margin-top: 22px;
+          .process__content {
+            display: $flex;
+            width: 70%;
+            border-radius: 7px;
+            margin: 0px auto 50px;
+            padding: 30px 68px 24px 32px;
+            background-color: $white;
+            &:last-child {
+              margin-bottom: 0px;
+            }
+          }
+          .process__img {
+            width: 50%;
+            margin-right: 61px;
+          }
+          .process__detail {
+            text-align: $leftText;
+            margin-top: 50px;
+            margin-bottom: 56px;
+            .process__icon {
+              height: 50px;
+              width: 50px;
+            }
+            .process__title {
+              margin-top: 20px;
+              margin-bottom: 15px;
+              color: $dark;
+            }
+            .process__text {
+              color: $blueDark;
+            }
+          }
+        }
+      }
+      .brands {
+        margin-top: 184px;
+        text-align: $centerText;
+        .brands__title {
+          text-transform: $upperTextTransform;
+          color: $green;
+        }
+        .brands__header {
+          margin-top: 24px;
+          margin-bottom: 32px;
+          color: $dark;
+        }
+        .brands__img {
+          width: 85%;
+          margin-bottom: 24px;
+        }
+        .brands__encouragement {
+          margin-top: 16px;
+          color: $blueDark;
+        }
+      }
+
+      .start {
+        display: $flex;
+        height: $absVh;
+        margin-top: 184px;
+        background-size: $absBgSize;
+        background-image: $startBg;
+        .start__description {
+          width: 25%;
+          margin: auto 0px auto 200px;
+          @include caption {
+            .caption {
+              text-transform: $upperTextTransform;
+            }
+          }
+          .title {
+            @extend .title;
+          }
+          .description {
+            @include description(20px);
+          }
+          .start__button {
+            margin-top: 30px;
+          }
+        }
+        .start__img {
+          width: 65%;
+          margin: auto 200px auto 129px;
+        }
+      }
+
+      .footer {
+        background-color: $black;
+        .footer__head,
+        .footer__content {
+          width: 75%;
+          display: $flex;
+          margin: 0px auto;
+          color: $silver;
+          border-bottom: 1px solid $silver;
+          .footer__brand {
+            display: $flex;
+            .footer__logo {
+              height: 44px;
+              padding-top: 73px;
+              margin-right: 4.12px;
+            }
+          }
+
+          .footer__menu {
+            display: $flex;
+            margin: auto;
+            .footer__item {
+              display: inline-block;
+            }
+          }
+
+          .footer__social {
+            margin-left: auto;
+          }
+
+          .footer__name,
+          .footer__menu,
+          .footer__social {
+            padding-top: 84px;
+            padding-bottom: 39px;
+          }
+
+          .footer__name {
+            padding-right: 81px;
+          }
+
+          .footer__item {
+            &:last-child {
+              padding-right: 81px;
+              margin-right: 0px;
+            }
+          }
+
+          .footer__item,
+          .footer__info p a {
+            color: $silver;
+            text-decoration: $noneTextDecoration;
+            margin-right: 32px;
+          }
+
+          .fa-brands {
+            font-size: 30px;
+            padding-right: 12px;
+            transition: all 0.5s ease 0s;
+            &:hover {
+              transform: rotate(360deg);
+            }
+          }
+
+          .fa-facebook {
+            &:hover {
+              color: $facebook;
+            }
+          }
+          .fa-instagram {
+            &:hover {
+              color: $instagram;
+            }
+          }
+          .fa-twitter {
+            &:hover {
+              color: $twitter;
+            }
+          }
+
+          .footer__content {
+            display: $flex;
+            padding-top: 39px;
+            padding-bottom: 39px;
+            .footer__legal p,
+            .footer__info p {
+              margin: 0px;
+            }
+          }
+
+          .footer__info {
+            display: $flex;
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+$mobile: 320px;
+$minDesktop: 919.9px;
+$maxDesktop: 920px;
+$minLarge: 1260px;
+$maxLarge: 1261px;
+$theLargest: 1285.6px;
+
+@mixin mobile {
+  @media (min-width: #{$mobile}) and (max-width: #{$minDesktop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$maxDesktop}) and (max-width: #{$minLarge}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$maxLarge}) and (max-width: #{$theLargest}) {
+    @content;
+  }
+}
+
+@include mobile {
+  body {
+    .page {
+      .menu {
+        display: $noneDisplay;
+        opacity: 90%;
+        margin-top: 80px;
+        position: $absPosition;
+        right: 100px;
+        padding: 23px 14px;
+        background-color: $violet;
+        .menu__item {
+          display: $flex;
+          padding: 10px 15px;
+        }
+        .menu__button {
+          margin-left: 0px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .navbar {
+        .navbar__icon {
+          display: $flex;
+          margin: 55px;
+          position: $absPosition;
+          right: 0;
+          top: 0;
+        }
+      }
+
+      #checkbox {
+        &:checked {
+          ~ .menu {
+            display: block;
+          }
+        }
+      }
+
+      #checkbox {
+        &:checked {
+          ~ .navbar__icon svg {
+            color: $violet;
+          }
+        }
+      }
+
+      .company {
+        text-align: $leftText;
+        margin: 50px;
+        .company__description {
+          font-size: 4vw;
+        }
+        .company__aim {
+          font-size: 3vw;
+        }
+        .company__button {
+          padding: 15px 40px;
+        }
+      }
+
+      .dashboard {
+        margin: auto;
+        background-size: $containBgSize;
+        background-position: center;
+      }
+
+      .assistance {
+        .assistance__title {
+          margin-left: 50px;
+        }
+        .data {
+          margin: 29px 50px;
+          .data__item {
+            width: 100%;
+            padding: 32px;
+            border-radius: 7px;
+            margin: auto auto 25px auto;
+            border: 1px solid $lightViolet;
+            background-color: $white;
+          }
+        }
+        .process {
+          padding-bottom: 80px;
+          .heading {
+            padding: 80px 50px 20px;
+          }
+          .process__details {
+            margin-top: 0px;
+            .process__content {
+              display: $flex;
+              flex-wrap: $flexWrap;
+              padding: 45px 30px 28px;
+              .process__img {
+                width: 100%;
+                margin: auto;
+              }
+              .process__detail {
+                text-align: $leftText;
+                margin: 20px 38px 45px;
+                .process__icon {
+                  height: 35px;
+                  width: 35px;
+                }
+              }
+            }
+          }
+        }
+
+        .brands {
+          margin: 184px 30px 0px;
+        }
+
+        .start {
+          display: $flex;
+          flex-wrap: $flexWrap;
+          .start__description {
+            width: 50%;
+            margin: 60px auto 0px;
+            .start__button {
+              margin-top: 15px;
+            }
+          }
+          .start__img {
+            width: 55%;
+            margin: 20px auto 60px;
+          }
+        }
+
+        .footer {
+          .footer__head {
+            margin: auto;
+            width: 80%;
+            .footer__name,
+            .footer__item {
+              &:last-child {
+                margin-right: 11px;
+                padding-right: 0px;
+              }
+            }
+            .footer__menu {
+              display: $flex;
+              flex-wrap: $flexWrap;
+              .footer__item {
+                width: 35%;
+              }
+            }
+            .footer__social {
+              width: 10%;
+              .fa-brands {
+                margin-bottom: 10px;
+              }
+            }
+          }
+
+          .footer__legal {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  body {
+    .page {
+      .menu {
+        padding-top: 60px;
+        margin: 0px;
+        .menu__item {
+          font-size: 17px;
+          margin-right: 15px;
+        }
+
+        .button {
+          @include button-desktop();
+        }
+      }
+
+      .company__description {
+        font-size: 2.2vw;
+        width: 60%;
+        margin: auto;
+        text-align: $centerText;
+      }
+      .company__aim {
+        font-size: 1.5vw;
+      }
+
+      .button {
+        @include button-desktop();
+      }
+
+      .assistance {
+        .data {
+          margin: 29px 70px 0px 100px;
+        }
+        .start {
+          display: $flex;
+          flex-wrap: $flexWrap;
+          .start__description {
+            margin: auto;
+          }
+          .start__img {
+            width: 50%;
+            margin: auto;
+          }
+        }
+      }
+
+      .dashboard {
+        margin: auto;
+        background-size: $containBgSize;
+        background-position: $centerBgPosition;
+      }
+
+      .footer {
+        .footer__menu {
+          width: 100%;
+          padding-top: 30px;
+          flex-wrap: $flexWrap;
+        }
+        .footer__social {
+          margin-left: 20px;
+          width: 10%;
+          .fa-brands {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include large {
+  body {
+    .page {
+      .menu {
+        .menu__button {
+          margin-left: 0px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .fa-brands {
+      margin-bottom: 10px;
+    }
+  }
+}

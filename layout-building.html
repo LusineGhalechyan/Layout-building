@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Layout-building</title>
+    <!-- <link rel="stylesheet" href="../1. Layout-bulding/images/styles.css" /> -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="navbar">
+        <a class="navbar__brand" href="#">
+          <img class="navbar__logo" src="./images/logo.png" />
+          <div class="navbar__name">aparg</div>
+        </a>
+
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox" class="navbar__icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </label>
+
+        <div class="menu">
+          <a class="menu__item" href="#">Home</a>
+          <a class="menu__item" href="#">Your benefits</a>
+          <a class="menu__item" href="#">Our process</a>
+          <a class="menu__item" href="#">Our works</a>
+          <a class="menu__item" href="#">Testimonials</a>
+          <a class="menu__item" href="#">Start a project</a>
+          <button class="button menu__button">Get Started</button>
+        </div>
+      </header>
+
+      <div class="company">
+        <h2 class="company__description">
+          Our services include design and prototyping, development and testing,
+          optimization and maintenance for a secure and flawless operation of
+          the software.
+        </h2>
+        <h3 class="company__aim">
+          Developing software that aligns with your business goals.
+        </h3>
+        <button class="button company__button">Get Started</button>
+      </div>
+
+      <div class="dashboard"></div>
+
+      <div class="assistance">
+        <h1 class="assistance__title">We are here to help you with</h1>
+
+        <div class="data">
+          <div class="data__item">
+            <img class="data__img data__img--chart" src="./images/Chart.svg" />
+            <h2 class="data__title">Grow your business</h2>
+            <div class="data__text">
+              The magic wand for success is in figuring out how to bring in the
+              profits and ensure the capacity needed to sustain that growth for
+              posterity
+            </div>
+          </div>
+
+          <div class="data__item">
+            <img
+              class="data__img data__img--discount"
+              src="./images/Discount.svg"
+            />
+            <h2 class="data__title">Drive more sales</h2>
+            <div class="data__text">
+              A potential customer, once lost, is hard to retain back. But
+              keeping some critical factors in mind, we can, for sure, use these
+              loyality programs as customer retention tools.
+            </div>
+          </div>
+
+          <div class="data__item">
+            <img class="data__img data__img--user" src="./images/User.svg" />
+            <h2 class="data__title">Handle by Expert</h2>
+            <div class="data__text">
+              We kmow how we can develop deep, trust-based relationships with
+              our clients, and work together more collaboratively.
+            </div>
+          </div>
+
+          <div class="data__item">
+            <img
+              class="data__img data__img--search"
+              src="./images/Search.svg"
+            />
+            <h2 class="data__title">UX Research</h2>
+            <div class="data__text">
+              UX research is the systematic study of target users and their
+              requirements to add realistic contexts and insights to design
+              processes.
+            </div>
+          </div>
+
+          <div class="data__item">
+            <img class="data__img data__img--graph" src="./images/Graph.svg" />
+            <h2 class="data__title">Business Audit</h2>
+            <div class="data__text">
+              An audit examines your business's financial records to verify they
+              are accurate. This is done through a systematic review of your
+              transactions.
+            </div>
+          </div>
+
+          <div class="data__item">
+            <img class="data__img data__img--bag" src="./images/Bag.svg" />
+            <h2 class="data__title">Data tracking</h2>
+            <div class="data__text">
+              The hardware and software, which when used together allows you to
+              know where something is at any point in time.
+            </div>
+          </div>
+        </div>
+
+        <div class="process">
+          <div class="heading">
+            <div class="caption">how it works</div>
+            <h1 class="title">Our Process</h1>
+            <div class="description">
+              We know the best solution for all of your business ideas and we
+              can help you solve all business problems
+            </div>
+          </div>
+
+          <div class="process__details">
+            <div class="process__content">
+              <img class="process__img" src="./images/process_audit.png" />
+
+              <div class="process__detail">
+                <img class="process__icon" src="./images/search.png" />
+                <h2 class="process__title">Business Audit</h2>
+                <div class="process__text">
+                  An audit examines your business's financial records to verify
+                  they are accurate. This is done through a systematic review of
+                  your transactions.
+                </div>
+              </div>
+            </div>
+
+            <div class="process__content">
+              <img class="process__img" src="./images/process_tracking.png" />
+
+              <div class="process__detail">
+                <img class="process__icon" src="./images/tracking.png" />
+                <h2 class="process__title">Data tracking</h2>
+                <div class="process__text">
+                  The hardware and software, which when used together allows you
+                  to know where something is at any point in time.
+                </div>
+              </div>
+            </div>
+
+            <div class="process__content">
+              <img class="process__img" src="./images/process_results.png" />
+
+              <div class="process__detail">
+                <img class="process__icon" src="./images/results.png" />
+                <h2 class="process__title">Results</h2>
+                <div class="process__text">
+                  An audit examines your business's financial records to verify
+                  they are accurate. This is done through a systematic review of
+                  your transactions.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="brands">
+          <h6 class="brands__title">brands</h6>
+          <h1 class="brands__header">
+            We work with thousands of the world's leading brands
+          </h1>
+          <img class="brands__img" src="./images/brands_1.png" />
+          <img class="brands__img" src="./images/brands_2.png" />
+          <h4 class="brands__encouragement">
+            You're going to be in good company. We work with world's leading
+            brands.
+          </h4>
+        </div>
+
+        <div class="start">
+          <div class="start__description">
+            <div class="caption">start with us</div>
+            <h1 class="title">Start working faster today</h1>
+            <div class="description">
+              We know the best solution for all of your business ideas and we
+              can help you solve all business problems
+            </div>
+            <button class="button start__button">Get Started</button>
+          </div>
+
+          <img class="start__img" src="./images/start-dashboard.png" />
+        </div>
+
+        <footer class="footer">
+          <section class="footer__head">
+            <div class="footer__brand">
+              <img class="footer__logo" src="./images/logo.png" />
+              <div class="footer__name">aparg</div>
+            </div>
+
+            <div class="footer__menu">
+              <a class="footer__item" href="#">Home</a>
+              <a class="footer__item" href="#">Your benefits</a>
+              <a class="footer__item" href="#">Our process</a>
+              <a class="footer__item" href="#">Our works</a>
+              <a class="footer__item" href="#">Testimonials</a>
+              <a class="footer__item" href="#">Start a project</a>
+            </div>
+
+            <div class="footer__social">
+              <a> <i class="fa-brands fa-facebook"></i> </a>
+              <a> <i class="fa-brands fa-instagram"></i> </a>
+              <a> <i class="fa-brands fa-twitter"></i> </a>
+            </div>
+          </section>
+
+          <section class="footer__foot">
+            <div class="footer__content">
+              <div class="footer__legal">
+                <p>2021 Copyright &copy;</p>
+              </div>
+
+              <div class="footer__info">
+                <p><a href="#">Privacy policy</a></p>
+                <p><a href="#"> Term of service</a></p>
+              </div>
+            </div>
+          </section>
+        </footer>
+
+        <!-- -->
+      </div>
+    </div>
+  </body>
+</html>
